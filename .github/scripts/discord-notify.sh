@@ -26,7 +26,7 @@ skip() {
 event() { jq -r "$1 // empty" "$GITHUB_EVENT_PATH"; }
 pr() { jq -r "$1 // empty" <<<"$pr_json"; }
 
-reviews_enabled() { [ "${DISCORD_REVIEW_NOTIFICATIONS:-true}" != "false" ]; }
+reviews_enabled() { [ "${DISCORD_REVIEW_NOTIFICATIONS:-}" = "true" ]; }
 
 # Open pull request whose head is owner:branch, preferring an exact SHA match.
 find_pr() {

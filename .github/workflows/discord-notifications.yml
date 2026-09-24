@@ -6,8 +6,9 @@ name: Discord Notifications
 #   🚀 PR opened / ready for review    🔁 PR reopened
 #   🟣 PR merged                       🔴 PR closed without merging
 #   ❌ CI failed (PRs and default branch)
-#   👀 Review requested / 🟢 Approved  (disable with the repository variable
-#                                       DISCORD_REVIEW_NOTIFICATIONS=false)
+#   👀 Review requested / 🟢 Approved  (off by default; enable with the
+#                                       repository variable
+#                                       DISCORD_REVIEW_NOTIFICATIONS=true)
 #
 # pull_request_target and workflow_run run in the base repository so the
 # DISCORD_WEBHOOK secret is available for fork PRs. This workflow must never
