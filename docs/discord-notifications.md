@@ -19,7 +19,7 @@ Deliberately not posted: open or closed drafts, new commits, comments,
 non-approving reviews, passing CI, and CI on branch pushes (covered by the
 PR run). Review and approval messages are off by default. When they are on,
 reviewers named in the first few seconds are listed on the open message
-instead of a separate 👀 Review Requested post.
+instead of a separate Review Requested post.
 
 ## Setup
 
@@ -27,7 +27,7 @@ instead of a separate 👀 Review Requested post.
    a webhook. Copy its URL.
 2. In GitHub, go to Settings → Secrets and variables → Actions and add a
    repository secret named `DISCORD_WEBHOOK` containing that URL.
-3. Optional: to also post 👀 review requested and 🟢 approved messages, add a
+3. Optional: to also post review requested and approved messages, add a
    repository variable `DISCORD_REVIEW_NOTIFICATIONS` set to `true`.
 
 Without the secret the workflow logs a warning and posts nothing.
