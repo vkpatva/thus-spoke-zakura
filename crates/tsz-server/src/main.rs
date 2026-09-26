@@ -69,7 +69,7 @@ fn init(data_dir: PathBuf, config_dir: PathBuf) -> Result<()> {
 
 const DEVELOPMENT_CREDENTIAL_WARNING: &str = concat!(
     "WARNING: Never use this mnemonic or private key in production. ",
-    "It is intended purely for development. Using it in production can result in loss of funds."
+    "It is intended purely for development. Using it in production will result in loss of funds."
 );
 
 fn development_credentials(store: &Store) -> Result<String> {
@@ -189,7 +189,7 @@ mod tests {
         );
         assert!(output.contains("Never use this mnemonic or private key in production"));
         assert!(output.contains("purely for development"));
-        assert!(output.contains("loss of funds"));
+        assert!(output.contains("will result in loss of funds"));
         assert!(output.contains(&format!("Mnemonic: {mnemonic}")));
         assert_eq!(
             hex::encode(mnemonic.parse::<bip39::Mnemonic>().unwrap().to_seed("")),
